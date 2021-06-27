@@ -1,0 +1,15 @@
+Топ-5 самых частых спонсоров:
+USDOE 	-	 450
+USDOE Office of Science (SC), Basic Energy Sciences (BES) 	-	 410
+National Science Foundation (NSF) 	-	 327
+USDOE National Nuclear Security Administration (NNSA) 	-	 234
+USDOE Office of Science (SC) 	-	 153
+
+
+Самые частые слова:
+[('AND', 150), ('PHYSICS', 112), ('CONDENSED', 57), ('MATTER', 57), ('SUPERCONDUCTIVITY', 57), ('SUPERFLUIDITY', 57), ('OF', 55), ('ELEMENTARY', 55), ('PARTICLES', 55), ('FIELDS', 55), ('MATERIALS', 54), ('SCIENCE', 54), ('ASTRONOMY', 38), ('ASTROPHYSICS', 38), ('BASIC', 37), ('BIOLOGICAL', 37), ('SCIENCES', 37)]
+
+
+Кол-во статей по годам:
+2021 	-	 1291
+2020 	-	 709
