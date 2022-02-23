@@ -8,6 +8,7 @@ FROM sales s
 LEFT JOIN sales_items si
 ON s.SalesId = si.SalesId
 WHERE s.ShipCountry = 'USA'
+  AND s.SalesDate BETWEEN '2012-01-01' AND '2012-03-31'
 
 -- Подзапрос (некоррелированный)
 SELECT sum(UnitPrice * Quantity)
@@ -17,6 +18,7 @@ WHERE SalesId IN
 	SELECT SalesId
 	FROM sales
 	WHERE ShipCountry = 'USA'
+	  AND SalesDate BETWEEN '2012-01-01' AND '2012-03-31'
 )
 
 -- Подзапрос (коррелированный)
@@ -28,6 +30,7 @@ WHERE SalesId IN
 	FROM sales s
 	WHERE ShipCountry = 'USA'
 	  AND s.SalesId = si.SalesId
+	  AND s.SalesDate BETWEEN '2012-01-01' AND '2012-03-31'
 )
 
 
