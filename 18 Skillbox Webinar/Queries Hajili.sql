@@ -94,25 +94,24 @@ FROM employees
 -- 4 Посчитайте количество треков в каждом альбоме. В результате должно быть:  имя альбома и кол-во треков. Решить  2-мя способами: подзапросом и джойнами
 -- Джоин
 SELECT
-	 --p.PlaylistId,
-	 p.Name
-	,COUNT(pt.TrackId) as TrackCount
-FROM playlists p
-LEFT JOIN playlist_track pt
-ON p.PlaylistId = pt.PlaylistId
-GROUP BY p.PlaylistId, p.Name
-ORDER BY p.PlaylistId
+	 a.Title
+	,COUNT(t.TrackId) as TrackCount
+FROM albums a
+LEFT JOIN tracks t
+ON a.AlbumId = t.AlbumId 
+GROUP BY a.Title, a.AlbumId
+ORDER BY a.AlbumId 
 
 -- Подзапрос (коррелированный)
 SELECT
-	 p.Name
+	 a.Title
 	,(
-		SELECT COUNT(pt.TrackId)
-		FROM playlist_track pt
-		WHERE pt.PlaylistId = p.PlaylistId
+		SELECT COUNT(t.TrackId)
+		FROM tracks t
+		WHERE t.AlbumId = a.AlbumId
 	 ) as TrackCount
 	
-FROM playlists p
+FROM albums a
 
 
 ---------------------------------------------------------------------------------------------------------------------------------
